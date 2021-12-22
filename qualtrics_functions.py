@@ -26,7 +26,7 @@ def create_qualtrics_ids(data_center, api_token):
         qualtrics_ids = {
             'data_center': data_center,
             'api_token': api_token,
-            'library': json.loads(response)['result']['elements'][0]['libraryId']
+            'library': json.loads(response.text)['result']['elements'][0]['libraryId']
             }
         return qualtrics_ids
 
